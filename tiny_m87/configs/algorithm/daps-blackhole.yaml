@@ -1,0 +1,21 @@
+name: DAPS-blackhole
+method:
+  _target_: algo.daps.DAPS
+  annealing_scheduler_config:
+    num_steps: 100
+    sigma_max: 100
+    sigma_min: 0.1
+    sigma_final: 0
+    schedule: linear
+    timestep: poly-7
+  diffusion_scheduler_config:
+    num_steps: 5
+    sigma_min: 0.01
+    sigma_final: 0
+    schedule: linear
+    timestep: poly-7
+  lgvd_config:
+    num_steps: 20
+    lr: 0.0001
+    tau: 1.0
+    lr_min_ratio: 1.0

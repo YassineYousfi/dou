@@ -1,0 +1,27 @@
+defaults:
+  - pretrain: blackhole-diameter
+  - problem: blackhole
+  - algorithm: daps-blackhole
+  - _self_
+
+tf32: true
+inference: true
+num_samples: 1
+compile: false
+seed: 0
+wandb: false
+exp_name: diameter-${diameter_px}px
+
+# One apparent-image pixel is 2 microarcseconds for this 64x64 corpus.
+diameter_px: 18.0
+data_root: ${oc.env:INVERSEBENCH_BLACKHOLE_DATA,../data/blackhole}
+
+problem:
+  prior: ../weights/blackhole-diameter-30k.pt
+  exp_dir: ../outputs
+  model:
+    root: ${data_root}/measure
+    ttype: direct
+  data:
+    root: ${data_root}/test
+    id_list: 21

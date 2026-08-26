@@ -1,0 +1,15 @@
+model:
+  _target_: fixed_diameter_vp.FixedDiameterVP
+  diameter_px: ${diameter_px}
+  diameter_mean: 17.30470085144043
+  diameter_scale: 3.123326301574707
+  cfg_scale: 1.0
+  model_type: SongUNet
+  img_resolution: 64
+  img_channels: 1
+  label_dim: 2
+  model_channels: 128
+  channel_mult: [1, 2, 2]
+  attn_resolutions: [16]
+  num_blocks: 1
+  dropout: 0.0

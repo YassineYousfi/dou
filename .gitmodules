@@ -1,0 +1,3 @@
+[submodule "tiny_m87/InverseBench"]
+	path = tiny_m87/InverseBench
+	url = https://github.com/devzhk/InverseBench.git
