@@ -1,0 +1,7 @@
+# Local environments and generated caches.
+.venv/
+__pycache__/
+.pytest_cache/
+
+# uv lockfiles are intentionally excluded at every directory depth.
+uv.lock
